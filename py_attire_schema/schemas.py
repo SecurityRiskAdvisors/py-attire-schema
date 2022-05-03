@@ -3,11 +3,6 @@ from pydantic import BaseModel, Field, validator, IPvAnyAddress
 from typing import Optional
 import re
 
-
-def schemas_data():
-    print("This is schemas data!")
-
-
 class ExecutionCategory(BaseModel):
     name: str
     abbreviation: str
@@ -80,7 +75,7 @@ class Procedure(BaseModel):
     def mitre_id_format(cls, v):
         mitre_id = ("^(T\d{4})(\.\d{3})?$")
         if not re.match(mitre_id, v):
-            return ValueError("Mitre Technique Is Incorrect")
+            return ValueError("Mitre Technique ID format unrecognized")
         return v.title()
 
 
