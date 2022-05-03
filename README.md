@@ -14,13 +14,13 @@ pydantic~=1.9.0
 ```python
 from setuptools import setup
 
-packages = ['py_attire_logger']
+packages = ['py_attire_schema']
 
 package_data = {'': ['*']}
 
 setup_kwargs = {
-    'name': 'py-attire-logger',
-    'version': '0.1.0',
+    'name': 'py-attire-schema',
+    'version': '1.1.0',
     'description': '',
     'long_description': None,
     'author': 'Your Name',
